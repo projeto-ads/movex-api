@@ -68,6 +68,19 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 - Website - [https://nestjs.com](https://nestjs.com/)
 - Twitter - [@nestframework](https://twitter.com/nestframework)
 
+## Env variables
+```
+POSTGRES_HOST=<HOST>
+POSTGRES_PORT=<PORT>
+POSTGRES_USER=<USER>
+POSTGRES_PASSWORD=<PASSWORD>
+POSTGRES_DATABASE=<DB_NAME>
+PORT=3000
+MODE=DEV
+RUN_MIGRATIONS=true
+JWT_SECRET_KEY=<JWT_SECRET>
+```
+
 ## License
 
 Nest is [MIT licensed](LICENSE).
