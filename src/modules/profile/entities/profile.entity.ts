@@ -21,6 +21,6 @@ export class Profile {
     @Column({ name: "challenges_completed" })
     challengesCompleted: number;
 
-    @Column({ name: "image_url" })
+    @Column({ name: "image_url", default: "assets/default.png" })
     imageUrl: string;
 }

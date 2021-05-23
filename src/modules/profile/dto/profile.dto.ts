@@ -7,6 +7,7 @@ export class ProfileDTO {
     currentExperience: number;
     challengesCompleted: number;
     imageUrl: string;
+    image64Base: string;
   
     constructor(json?: Partial<ProfileDTO>) {
       Object.assign(this, json);
