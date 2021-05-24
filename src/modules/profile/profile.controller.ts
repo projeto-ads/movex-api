@@ -12,8 +12,13 @@ export class ProfileController {
   }
 
   @Put(':id')
-  update(@Param('id') id: number, @Body() profile: ProfileDTO) {
-    return this.profileService.update(+id, profile);
+  updateChallengeInfo(@Param('id') id: number, @Body() profile: ProfileDTO) {
+    return this.profileService.updateChallengeInfo(+id, profile);
+  }
+
+  @Put('upload-image/:id')
+  uploadProfileImage(@Param('id') id: number, @Body() body: any) {
+    return this.profileService.uploadProfileImage(+id, body);
   }
 
 }

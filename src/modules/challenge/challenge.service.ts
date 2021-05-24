@@ -11,8 +11,8 @@ export class ChallengeService {
     private readonly challengeRepository: ChallengeRepository
   ) {}
 
-  findSome(): Promise<Challenge> {
-    return this.challengeRepository.findSome();
+  async findSome(): Promise<Challenge> {
+    return await this.challengeRepository.findSome();
   }
 
 }
