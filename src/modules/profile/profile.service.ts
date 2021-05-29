@@ -16,8 +16,25 @@ export class ProfileService {
     private profileRepository: Repository<Profile>,
   ) { }
 
-  async findOne(id: number) {
-    return await this.profileRepository.findOne(id);
+  async getAll(){
+      return await this.profileRepository.find();
+  }
+
+  async getByID(id: number) {
+      return await this.profileRepository.findOne(id);
+  }
+
+  async getByEmail(email: string) {
+    return await this.profileRepository.findOne({email});
+  }
+
+  async create(profile: Profile) {
+      return await this.profileRepository.save(profile)
+  }
+
+  async update(id: number, profile: Profile){
+    await this.profileRepository.update(id, profile);
+    return this.getByID(id);
   }
 
   async updateChallengeInfo(id: number, profile: ProfileDTO) {
@@ -43,6 +60,10 @@ export class ProfileService {
     await this.profileRepository.update(id, { imageUrl })
 
     return { imageUrl };
+  }
+
+  async delete(id: number) {
+    return await this.profileRepository.delete(id);
   }
 
 }
