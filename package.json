@@ -27,9 +27,11 @@
     "@nestjs/mapped-types": "*",
     "@nestjs/passport": "^7.1.5",
     "@nestjs/platform-express": "^7.6.15",
+    "@nestjs/swagger": "^4.8.0",
     "@nestjs/typeorm": "^7.1.5",
     "azure-storage": "^2.10.4",
     "dotenv": "^8.2.0",
+    "fastify-swagger": "^4.7.0",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
     "passport-local": "^1.0.0",
@@ -37,6 +39,7 @@
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "rxjs": "^6.6.6",
+    "swagger-ui-express": "^4.1.6",
     "typeorm": "^0.2.32"
   },
   "devDependencies": {

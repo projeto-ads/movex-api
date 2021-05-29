@@ -6,7 +6,6 @@ import { ChallengeModule } from './modules/challenge/challenge.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { config } from './orm.config';
 import { ProfileModule } from './modules/profile/profile.module';
-import { UserModule } from './modules/user/user.module';
 import { AuthModule } from './modules/auth/auth.module';
 
 @Module({
@@ -14,8 +13,7 @@ import { AuthModule } from './modules/auth/auth.module';
     TypeOrmModule.forRoot({ ...config, autoLoadEntities: true }),
     ChallengeModule,
     ProfileModule,
-    AuthModule,
-    UserModule
+    AuthModule
   ],
   controllers: [AppController],
   providers: [AppService],
