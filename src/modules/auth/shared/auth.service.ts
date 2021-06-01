@@ -22,9 +22,16 @@ export class AuthService {
 
       async login(user: any) {
         const payload = { email: user.email, sub: user.id };
-        return {
-          acess_token: this.jwtService.sign(payload),
-        };
+        const profile = await this.profileService.getByEmail(user.email);
+        delete profile.password;
+        const accessToken = this.jwtService.sign(payload);
+
+        if (accessToken && profile) {
+          return {
+            access_token: accessToken,
+            profile
+          }
+        }
       }
     
 }
